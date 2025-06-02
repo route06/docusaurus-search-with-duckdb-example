@@ -1,0 +1,1 @@
+# docusaurus-search-with-duckdb-example
