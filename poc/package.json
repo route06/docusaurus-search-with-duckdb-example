@@ -1,0 +1,37 @@
+{
+  "name": "duckdb-offline-search-docs",
+  "version": "0.1.0",
+  "description": "DuckDB WASM を使った docs のオフライン検索",
+  "main": "index.js",
+  "scripts": {
+    "collect": "node scripts/collect.js",
+    "vectorize": "node scripts/vectorize.js",
+    "wakachi-gaki": "node scripts/wakachi-gaki.js",
+    "build-db-all": "npm run collect && npm run wakachi-gaki && npm run vectorize",
+    "start": "webpack serve --mode development",
+    "server": "node server.js",
+    "dev": "concurrently \"npm run server\" \"npm run start\"",
+    "build": "webpack --mode production"
+  },
+  "dependencies": {
+    "@duckdb/duckdb-wasm": "1.29.1-dev132.0",
+    "dotenv": "16.5.0",
+    "duckdb": "1.2.1",
+    "express": "5.1.0",
+    "lindera-wasm": "0.43.1",
+    "marked": "15.0.11",
+    "openai": "4.98.0"
+  },
+  "devDependencies": {
+    "concurrently": "9.1.2",
+    "copy-webpack-plugin": "12.0.2",
+    "css-loader": "7.1.2",
+    "html-webpack-plugin": "5.6.0",
+    "style-loader": "3.3.4",
+    "ts-loader": "9.5.1",
+    "typescript": "5.3.3",
+    "webpack": "5.99.8",
+    "webpack-cli": "5.1.4",
+    "webpack-dev-server": "4.15.1"
+  }
+}

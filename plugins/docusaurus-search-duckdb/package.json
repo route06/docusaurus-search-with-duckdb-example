@@ -1,0 +1,31 @@
+{
+  "name": "docusaurus-search-duckdb",
+  "version": "1.0.0",
+  "description": "DuckDB-powered full-text search plugin for Docusaurus",
+  "main": "index.js",
+  "types": "lib/index.d.ts",
+  "keywords": [
+    "docusaurus",
+    "plugin",
+    "search",
+    "duckdb",
+    "full-text-search"
+  ],
+  "peerDependencies": {
+    "@docusaurus/core": "3.4.0",
+    "@docusaurus/types": "3.4.0",
+    "@duckdb/duckdb-wasm": "1.29.1-dev132.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "3.4.0",
+    "@types/react": "18.3.23",
+    "typescript": "5.8.3"
+  },
+  "files": [
+    "lib/",
+    "src/"
+  ]
+}

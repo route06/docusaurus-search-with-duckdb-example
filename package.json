@@ -1,0 +1,42 @@
+{
+  "name": "docusaurus-search-with-duckdb-example",
+  "version": "1.0.0",
+  "description": "Docusaurus search plugin example using DuckDB WASM",
+  "license": "Apache-2.0",
+  "scripts": {
+    "docusaurus": "docusaurus",
+    "start": "yarn collect-docs && docusaurus start",
+    "build": "yarn collect-docs && docusaurus build",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "clear": "docusaurus clear",
+    "serve": "docusaurus serve",
+    "write-translations": "docusaurus write-translations",
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "collect-docs": "node plugins/docusaurus-search-duckdb/scripts/collect-docs.js"
+  },
+  "dependencies": {
+    "@docusaurus/core": "3.4.0",
+    "@docusaurus/preset-classic": "3.4.0",
+    "@duckdb/duckdb-wasm": "1.29.1-dev132.0",
+    "@mdx-js/react": "3.0.1",
+    "clsx": "2.1.1",
+    "prism-react-renderer": "2.3.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "3.4.0",
+    "@swc/core": "1.11.29",
+    "@tsconfig/docusaurus": "2.0.3",
+    "@types/react": "18.3.23",
+    "marked": "15.0.12",
+    "swc-loader": "0.2.6",
+    "typescript": "5.8.3",
+    "user-agent-data-types": "0.4.2"
+  },
+  "engines": {
+    "node": ">=22.16.0"
+  },
+  "packageManager": "yarn@1.22.22"
+}

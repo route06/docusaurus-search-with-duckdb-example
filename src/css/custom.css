@@ -1,0 +1,139 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #0032a8;
+  --ifm-color-primary-dark: #002d97;
+  --ifm-color-primary-darker: #002b8f;
+  --ifm-color-primary-darkest: #002376;
+  --ifm-color-primary-light: #0037b9;
+  --ifm-color-primary-lighter: #003ac1;
+  --ifm-color-primary-lightest: #0041da;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* line-height */
+  --ifm-line-height-base: 1.75rem;
+
+  /* font */
+  --ifm-font-family-base: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", "BIZ UDPGothic", Meiryo, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Sans Emoji";
+}
+
+/* headline h2 underline */
+:root .markdown h2.anchor {
+  border-image: linear-gradient(to bottom, #102a48, #0f4c81) 1;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme="dark"] {
+  --ifm-color-primary: #83bdf0;
+  --ifm-color-primary-dark: #62abec;
+  --ifm-color-primary-darker: #51a3ea;
+  --ifm-color-primary-darkest: #2088e4;
+  --ifm-color-primary-light: #a4cff4;
+  --ifm-color-primary-lighter: #b5d7f6;
+  --ifm-color-primary-lightest: #e6f2fc;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* headline h2 underline in dark mode*/
+[data-theme="dark"] .markdown h2.anchor {
+  border-image: linear-gradient(to bottom, #c2bbb8, #fff) 1;
+}
+
+/*--- markdown file style ---*/
+/* headline */
+.markdown h1 {
+  font-size: 2rem;
+}
+.markdown h2.anchor {
+  border-left: 8px solid;
+  font-size: 1.6rem;
+  padding-left: 0.75rem;
+  line-height: 2.5rem;
+  --ifm-h2-vertical-rhythm-top: 3;
+}
+.markdown h3 {
+  font-size: 1.3rem;
+  --ifm-h3-vertical-rhythm-top: 2;
+}
+.markdown h4 {
+  font-size: 1.14rem;
+}
+.markdown h5 {
+  font-size: 1rem;
+}
+.markdown h6 {
+  font-size: 0.88rem;
+}
+
+.markdown > h2,
+.markdown > h3,
+.markdown > h4,
+.markdown > h5,
+.markdown > h6 {
+  --ifm-heading-vertical-rhythm-bottom: 1;
+}
+
+/* table */
+.markdown table th,
+.markdown table td {
+  font-size: 0.94rem;
+  line-height: 1.5rem;
+  --ifm-table-cell-padding: 0.5rem;
+}
+
+/* nested list */
+.markdown ul li:has(ul) ul,
+.markdown ul li:has(ol) ul,
+.markdown ul li:has(ul) ol,
+.markdown ul li:has(ol) ol,
+.markdown ol li:has(ul) ul,
+.markdown ol li:has(ol) ul,
+.markdown ol li:has(ul) ol,
+.markdown ol li:has(ol) ol {
+  font-size: 0.94rem;
+  padding-left: 1rem;
+  margin: 0.25rem 0 1rem 0;
+  line-height: 1.5rem;
+}
+
+/* link_card */
+.card > h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0;
+}
+.card {
+  padding: 1rem !important;
+  --ifm-card-border-radius: var(--ifm-global-radius);
+}
+article:has(.card) {
+  margin-bottom: 1rem !important;
+}
+article:has(.card):last-of-type {
+  margin-bottom: 3rem !important;
+}
+
+/* sidebar right */
+ul.table-of-contents li {
+  line-height: 1.25rem;
+}
+
+/* search highlight */
+mark {
+  background-color: #fff8c5;
+  color: inherit;
+  padding: 0.1em 0.2em;
+  border-radius: 0.2em;
+}
+
+[data-theme="dark"] mark {
+  background-color: rgba(210, 153, 34, 0.4);
+  color: inherit;
+}

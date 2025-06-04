@@ -1,0 +1,8 @@
+.env*.local
+bin/lindera-cjk
+bin/lindera-cjk2
+bin/lindera-cjk3
+dist/
+public/docs.json
+public/docs_wakachi.json
+public/docs_search.json

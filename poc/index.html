@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>docs 検索</title>
+</head>
+<body>
+  <div class="container">
+    <h1>docs 検索</h1>
+    <div class="search-type-container">
+      <div class="search-type-options">
+        <label>
+          <input type="radio" name="search-type" value="fulltext" checked>
+          全文検索
+        </label>
+        <label>
+          <input type="radio" name="search-type" value="fulltext-wakachi">
+          日本語全文検索（わかち書き版）
+        </label>
+        <label>
+          <input type="radio" name="search-type" value="vector">
+          ベクトル検索
+        </label>
+      </div>
+    </div>
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="検索キーワードを入力してください...">
+      <button id="search-button">検索</button>
+    </div>
+    <div id="loading" class="hidden">読み込み中...</div>
+    <div id="search-results"></div>
+    
+    <div class="wakachi-gaki-container">
+      <h3>わかち書きツール</h3>
+      <div class="wakachi-gaki-form">
+        <textarea id="wakachi-input" rows="4" placeholder="日本語テキストを入力してください..."></textarea>
+        <button id="wakachi-button">わかち書き実行</button>
+        <div id="wakachi-loading" class="hidden">処理中...</div>
+        <div id="wakachi-results">
+          <h4>結果</h4>
+          <div id="wakachi-tokens"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="debug-container">
+      <h3>SQLデバッグ</h3>
+      <div class="debug-samples">
+        <details>
+          <summary>サンプルSQLクエリ</summary>
+          <div class="sample-queries">
+            <button class="sample-query" data-sql="show tables;">テーブル一覧</button>
+            <button class="sample-query" data-sql="desc documents;">テーブル構造</button>
+            <button class="sample-query" data-sql="SELECT path, title, content FROM documents LIMIT 10">ドキュメントサンプル</button>
+            <button class="sample-query" data-sql="SELECT path, title, content FROM documents WHERE content LIKE '%License%' LIMIT 10">サンプル LIKE 検索</button>
+            <button class="sample-query" data-sql="SELECT path, title, fts_main_documents_w.match_bm25(path, 'License') AS score, content FROM documents WHERE score IS NOT NULL ORDER BY score DESC LIMIT 10">サンプル日本語全文検索</button>
+          </div>
+        </details>
+      </div>
+      <textarea id="custom-sql" rows="6" placeholder="実行したいSQLクエリを入力してください..."></textarea>
+      <button id="execute-sql-button">SQL実行</button>
+      <div id="sql-results"></div>
+    </div>
+  </div>
+</body>
+</html>
