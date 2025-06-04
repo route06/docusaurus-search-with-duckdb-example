@@ -8,6 +8,10 @@ DuckDB WASMを使用してブラウザ内で高速な全文検索を実現する
   <img alt="スクリーンショット" src="screenshot-light.png" />
 </picture>
 
+よろしければ、下記ブログ記事もご覧ください。
+
+* [Docusaurus v3 の全文検索を DuckDB Wasm \+ FTS 拡張で実装した \- ROUTE06 Tech Blog](https://tech.route06.co.jp/entry/2025/06/04/170000)
+
 > [!NOTE]
 > 本件実装前に作成した PoC 版のコードが [poc/](./poc/) にあります。全文検索の他に、「日本語全文検索（わかち書き版）」と「ベクトル検索」もあります。
 
