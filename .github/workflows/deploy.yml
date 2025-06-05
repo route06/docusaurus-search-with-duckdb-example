@@ -27,6 +27,8 @@ jobs:
 
       - name: Build website
         run: yarn build
+        env:
+          ROOT_PATH: "/${{ github.event.repository.name }}/"
 
       - uses: actions/upload-pages-artifact@v3
         with:

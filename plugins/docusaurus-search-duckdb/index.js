@@ -2,7 +2,7 @@ const path = require("path");
 
 function pluginDuckDBSearch(context, options = {}) {
   const {
-    routeBasePath = "search",
+    routeBasePath = "/search",
     docsJsonPath = "docs.json",
     enableDebugMode = true,
   } = options;
@@ -18,7 +18,7 @@ function pluginDuckDBSearch(context, options = {}) {
       const { addRoute } = actions;
 
       addRoute({
-        path: `/${routeBasePath}`,
+        path: routeBasePath,
         component: path.resolve(__dirname, "./src/theme/SearchPage/index.tsx"),
         exact: true,
       });

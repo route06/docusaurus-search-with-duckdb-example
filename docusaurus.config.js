@@ -4,7 +4,7 @@
 const lightCodeTheme = require("prism-react-renderer").themes.github;
 const darkCodeTheme = require("prism-react-renderer").themes.dracula;
 
-const baseUrl = process.env.PREVIEW_PATH || "/";
+const baseUrl = process.env.ROOT_PATH || "/";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -55,7 +55,7 @@ const config = {
     [
       "./plugins/docusaurus-search-duckdb",
       {
-        routeBasePath: "search",
+        routeBasePath: baseUrl + "search",
         docsJsonPath: "docs.json",
         enableDebugMode: true,
       },

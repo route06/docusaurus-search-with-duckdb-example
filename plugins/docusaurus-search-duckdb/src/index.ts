@@ -13,7 +13,7 @@ export default function pluginDuckDBSearch(
   options: PluginOptions,
 ): Plugin<void> {
   const {
-    routeBasePath = "search",
+    routeBasePath = "/search",
     docsJsonPath = "docs.json",
     enableDebugMode = true,
   } = options;
@@ -33,7 +33,7 @@ export default function pluginDuckDBSearch(
       const { addRoute } = actions;
 
       addRoute({
-        path: `/${routeBasePath}`,
+        path: routeBasePath,
         component: "@theme/SearchPage",
         exact: true,
       });
