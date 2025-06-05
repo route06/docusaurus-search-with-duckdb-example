@@ -2,6 +2,10 @@
 
 DuckDB WASMを使用してブラウザ内で高速な全文検索を実現するDocusaurusプラグインの実装例です。
 
+デモサイトを用意してあります。
+
+https://route06.github.io/docusaurus-search-with-duckdb-example/search/
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="screenshot-dark.png" />
   <source media="(prefers-color-scheme: light)" srcset="screenshot-light.png" />
