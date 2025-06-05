@@ -25,7 +25,7 @@ module.exports = {
     [
       './plugins/docusaurus-search-duckdb',
       {
-        routeBasePath: 'search',
+        routeBasePath: '/search',
         docsJsonPath: 'docs.json',
         enableDebugMode: true,
       },
@@ -38,7 +38,7 @@ module.exports = {
 
 | オプション | 型 | デフォルト | 説明 |
 |------------|-----|-----------|-----|
-| `routeBasePath` | `string` | `'search'` | 検索ページのベースパス |
+| `routeBasePath` | `string` | `'/search'` | 検索ページのベースパス |
 | `docsJsonPath` | `string` | `'docs.json'` | ドキュメントJSONファイルのパス |
 | `enableDebugMode` | `boolean` | `true` | SQLデバッグインターフェースを有効にする |
 

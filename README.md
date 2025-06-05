@@ -96,7 +96,7 @@ plugins: [
   [
     "./plugins/docusaurus-search-duckdb",
     {
-      routeBasePath: "search",      // 検索ページのパス
+      routeBasePath: "/search",     // 検索ページのパス
       docsJsonPath: "docs.json",    // ドキュメントJSONファイルのパス
       enableDebugMode: true,        // SQLデバッグ機能の有効/無効
     },
